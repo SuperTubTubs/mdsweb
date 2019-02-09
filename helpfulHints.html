@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<title>Helpful Hints</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="main.css">
+<body>
+
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+        <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+            <a href="main.html" class="w3-bar-item w3-button"><b>MDSWEB</b> Home</a>
+            <!-- Float links to the right. Hide them on small screens -->
+            <div class="w3-right w3-hide-small">
+                <a href="#projects" class="w3-bar-item w3-button">JINFO</a>
+                <a href="helpfulHints.html" class="w3-bar-item w3-button">HWIL Helpful Hints</a>
+                <a href="#contact" class="w3-bar-item w3-button">Fun Facts</a>
+            </div>
+        </div>
+    </div>
+
+
+    <p>Hint 1:</p>
+    <button class="collapsible">Hint 1</button>
+    <div class="content">
+        <p>Do the Thing with the thing.</p>
+    </div>
+
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>
